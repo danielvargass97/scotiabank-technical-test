@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: students
+
+  r2dbc:
+    url: r2dbc:h2:mem:///studentsdb
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
